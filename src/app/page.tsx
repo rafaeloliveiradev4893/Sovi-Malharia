@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/how-it-works";
 import { JsonLd } from "@/components/json-ld";
 import { Pricing } from "@/components/pricing";
 import { Products } from "@/components/products";
+import { Reveal } from "@/components/reveal";
 import { ServiceArea } from "@/components/service-area";
 import { Techniques } from "@/components/techniques";
 import { TrustBar } from "@/components/trust-bar";
@@ -18,15 +19,33 @@ export default function Home() {
       <JsonLd data={faqJsonLd()} />
       <Hero />
       <TrustBar />
-      <Products />
-      <Techniques />
-      <HowItWorks />
-      <Pricing />
-      <Gallery />
-      <Audience />
-      <ServiceArea />
-      <Faq />
-      <FinalCta />
+      <Reveal>
+        <Products />
+      </Reveal>
+      <Reveal>
+        <Techniques />
+      </Reveal>
+      <Reveal>
+        <HowItWorks />
+      </Reveal>
+      <Reveal>
+        <Pricing />
+      </Reveal>
+      <Reveal>
+        <Gallery />
+      </Reveal>
+      <Reveal>
+        <Audience />
+      </Reveal>
+      <Reveal>
+        <ServiceArea />
+      </Reveal>
+      <Reveal>
+        <Faq />
+      </Reveal>
+      <Reveal>
+        <FinalCta />
+      </Reveal>
     </>
   );
 }

@@ -25,7 +25,7 @@ export function Hero() {
             </WhatsAppLink>
             <a
               href="#galeria"
-              className="inline-flex h-12 w-full items-center justify-center rounded-md border border-brand/30 bg-white px-5 text-sm font-semibold text-brand hover:bg-brand-soft sm:w-auto"
+              className="motion-link inline-flex h-12 w-full items-center justify-center rounded-md border border-brand/30 bg-white px-5 text-sm font-semibold text-brand hover:bg-brand-soft sm:w-auto"
             >
               Ver galeria
             </a>
@@ -42,7 +42,7 @@ export function Hero() {
             ))}
           </ul>
         </div>
-        <div className="relative border border-line bg-paper px-8 py-14 sm:px-12">
+        <div className="hero-panel relative border border-line bg-paper px-8 py-14 sm:px-12">
           <span className="absolute left-3 top-3 h-4 w-4 border-l border-t border-brand" aria-hidden="true" />
           <span className="absolute right-3 top-3 h-4 w-4 border-r border-t border-brand" aria-hidden="true" />
           <span className="absolute bottom-3 left-3 h-4 w-4 border-b border-l border-accent" aria-hidden="true" />

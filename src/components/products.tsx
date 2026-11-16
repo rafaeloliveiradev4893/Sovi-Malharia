@@ -23,7 +23,7 @@ export function Products() {
             return (
               <li
                 key={product.id}
-                className="flex flex-col border border-line bg-white p-6"
+                className="lift flex flex-col border border-line bg-white p-6"
               >
                 <span className="text-brand">
                   <Icon />

@@ -14,7 +14,7 @@ export function HowItWorks() {
         </SectionHeading>
         <ol className="mt-10 grid gap-4 md:grid-cols-5">
           {business.steps.map((step, index) => (
-            <li key={step} className="border border-line bg-white p-5">
+            <li key={step} className="lift border border-line bg-white p-5">
               <span className="text-sm font-semibold text-brand">
                 {String(index + 1).padStart(2, "0")}
               </span>

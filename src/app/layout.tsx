@@ -88,6 +88,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${sans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col pb-28 md:pb-0">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <a href="#conteudo" className="skip-link">
           Ir para o conteúdo
         </a>

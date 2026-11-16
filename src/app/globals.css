@@ -67,16 +67,8 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.faq-minus {
-  display: none;
-}
-
-details[open] .faq-plus {
-  display: none;
-}
-
-details[open] .faq-minus {
-  display: inline;
+.faq-mark {
+  display: inline-block;
 }
 
 .gallery-dialog {
@@ -90,4 +82,133 @@ details[open] .faq-minus {
 
 .gallery-dialog::backdrop {
   background: rgba(28, 27, 25, 0.72);
+}
+
+.motion-link {
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.nav-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: color 0.18s ease, background-size 0.22s ease;
+}
+
+.nav-link:hover {
+  background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes draw {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .brand-rule {
+    transform-origin: right center;
+    animation: draw 0.7s ease both;
+  }
+
+  .hero-panel {
+    animation: rise 0.7s ease 0.12s both;
+  }
+
+  .trust-in > li {
+    animation: rise 0.45s ease both;
+  }
+
+  .trust-in > li:nth-child(2) {
+    animation-delay: 0.04s;
+  }
+
+  .trust-in > li:nth-child(3) {
+    animation-delay: 0.08s;
+  }
+
+  .trust-in > li:nth-child(4) {
+    animation-delay: 0.12s;
+  }
+
+  .trust-in > li:nth-child(5) {
+    animation-delay: 0.16s;
+  }
+
+  html.js .reveal.reveal-wait:not(.reveal-in) {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  html.js .reveal.reveal-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(28, 27, 25, 0.06);
+  }
+
+  .motion-link:hover {
+    transform: translateY(-1px);
+  }
+
+  #topo {
+    transition: box-shadow 0.2s ease;
+  }
+
+  .faq-mark {
+    transition: transform 0.2s ease;
+  }
+
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.28s ease;
+  }
+
+  details[open] .faq-panel {
+    grid-template-rows: 1fr;
+  }
+
+  .faq-panel > div {
+    overflow: hidden;
+  }
+
+  details[open] .faq-mark {
+    transform: rotate(45deg);
+  }
+
+  .mobile-panel {
+    animation: rise 0.22s ease;
+  }
+
+  .gallery-dialog[open] {
+    animation: rise 0.22s ease;
+  }
+}
+
+#topo.is-scrolled {
+  box-shadow: 0 8px 24px rgba(28, 27, 25, 0.06);
 }

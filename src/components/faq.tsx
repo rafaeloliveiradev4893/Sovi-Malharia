@@ -15,16 +15,17 @@ export function Faq() {
             <details key={item.question} className="group border-b border-line">
               <summary className="flex cursor-pointer items-center justify-between gap-4 py-4 text-base font-semibold text-ink">
                 {item.question}
-                <span className="faq-plus text-xl leading-none text-brand" aria-hidden="true">
+                <span className="faq-mark text-xl leading-none text-brand" aria-hidden="true">
                   +
                 </span>
-                <span className="faq-minus text-xl leading-none text-brand" aria-hidden="true">
-                  –
-                </span>
               </summary>
-              <p className="pb-5 pr-8 text-base leading-relaxed text-ink-soft">
-                {item.answer}
-              </p>
+              <div className="faq-panel">
+                <div>
+                  <p className="pb-5 pr-8 text-base leading-relaxed text-ink-soft">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
             </details>
           ))}
         </div>

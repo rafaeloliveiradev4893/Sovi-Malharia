@@ -69,7 +69,7 @@ export function MobileNav({ links }: { links: readonly LinkItem[] }) {
         <nav
           id={panelId}
           aria-label="Seções"
-          className="absolute inset-x-0 top-full border-b border-line bg-white px-5 py-3 shadow-sm"
+          className="mobile-panel absolute inset-x-0 top-full border-b border-line bg-white px-5 py-3 shadow-sm"
         >
           <ul className="flex flex-col">
             {links.map((link) => (

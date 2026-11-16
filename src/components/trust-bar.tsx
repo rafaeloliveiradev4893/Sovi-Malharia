@@ -3,7 +3,7 @@ import { business } from "@/config/business";
 export function TrustBar() {
   return (
     <section aria-label="Dados do atendimento" className="border-y border-line bg-white">
-      <ul className="mx-auto grid w-full max-w-6xl grid-cols-2 md:grid-cols-5">
+      <ul className="trust-in mx-auto grid w-full max-w-6xl grid-cols-2 md:grid-cols-5">
         {business.trust.map((item) => (
           <li
             key={item}

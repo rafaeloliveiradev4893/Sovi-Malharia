@@ -16,7 +16,7 @@ export function Audience() {
         </SectionHeading>
         <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {business.audience.map((item) => (
-            <li key={item.title} className="bg-white p-6">
+            <li key={item.title} className="lift bg-white p-6">
               <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
               <p className="mt-2 text-base leading-relaxed text-ink-soft">
                 {item.text}

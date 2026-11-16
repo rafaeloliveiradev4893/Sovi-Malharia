@@ -1,12 +1,14 @@
 import { business } from "@/config/business";
+import { HeaderShadow } from "@/components/header-shadow";
 import { Logo } from "@/components/logo";
 import { MobileNav } from "@/components/mobile-nav";
 import { WhatsAppLink } from "@/components/whatsapp-link";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
-      <div className="h-1 bg-brand" aria-hidden="true">
+    <header id="topo" className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <HeaderShadow />
+      <div className="brand-rule h-1 bg-brand" aria-hidden="true">
         <div className="ml-auto h-full w-1/4 bg-accent" />
       </div>
       <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center gap-3 px-5 sm:px-8">
@@ -18,7 +20,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-ink hover:text-brand"
+              className="nav-link text-sm font-semibold text-ink hover:text-brand"
             >
               {link.label}
             </a>

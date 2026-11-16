@@ -15,7 +15,7 @@ export function Techniques() {
         </SectionHeading>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {business.techniques.map((technique) => (
-            <article key={technique.id} className="border border-line bg-paper p-6 sm:p-8">
+            <article key={technique.id} className="lift border border-line bg-paper p-6 sm:p-8">
               <h3 className="text-2xl font-semibold text-ink">{technique.name}</h3>
               <p className="mt-3 text-base leading-relaxed text-ink-soft">
                 {technique.text}

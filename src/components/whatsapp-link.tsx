@@ -49,7 +49,7 @@ export function WhatsAppLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className={`inline-flex items-center justify-center gap-2 rounded-md text-center text-sm font-semibold ${size} ${variants[variant]} ${className}`}
+      className={`motion-link inline-flex items-center justify-center gap-2 rounded-md text-center text-sm font-semibold ${size} ${variants[variant]} ${className}`}
     >
       {variant === "primary" ? <PhoneIcon /> : null}
       {compact ? (
