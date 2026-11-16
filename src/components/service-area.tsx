@@ -8,25 +8,27 @@ export function ServiceArea() {
   return (
     <section id="regiao" className="bg-paper">
       <Container className="py-16 sm:py-24">
-        <SectionHeading
-          eyebrow="Região"
-          title="Malharia em Boninal, com entrega na Chapada Diamantina"
-        >
-          A Sovi Malharia fica em {business.address.city}, na{" "}
-          {business.address.street}. A entrega é feita para Boninal e para a
-          região da Chapada Diamantina, incluindo {cities}. Para outra cidade
-          da Chapada, a entrega é confirmada no orçamento.
-        </SectionHeading>
-        <p className="mt-6">
-          <a
-            href={business.maps}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base font-semibold text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand"
+        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
+          <SectionHeading
+            eyebrow="Boninal e Região"
+            title="Entrega em toda a Chapada Diamantina"
           >
-            Ver a oficina no Google Maps
-          </a>
-        </p>
+            Atendemos Boninal e a região da Chapada Diamantina, incluindo{" "}
+            {cities}. A oficina fica em {business.address.city}, na{" "}
+            {business.address.street}. Para outra cidade da Chapada, a entrega
+            é confirmada no orçamento.
+          </SectionHeading>
+          <div className="overflow-hidden border border-brand/30 shadow-[inset_0_0_0_1px_rgba(163,56,52,0.18)]">
+            <iframe
+              title="Localização da Sovi Malharia no Google Maps"
+              src={business.mapsEmbed}
+              className="aspect-[4/3] w-full border-0 lg:aspect-auto lg:min-h-[320px] lg:h-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </Container>
     </section>
   );

@@ -21,6 +21,15 @@ export function ShirtIcon({ className }: IconProps) {
   );
 }
 
+export function OversizeIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M10 6.5 6.5 9 3.5 7.2 6.2 14.5 8 16.5v9.5h16V16.5l1.8-2 2.7-7.3L25.5 9 22 6.5l-2.5 2.4a4.6 4.6 0 0 1-7 0L10 6.5Z" />
+      <path d="M11 25.5h10" />
+    </svg>
+  );
+}
+
 export function TankIcon({ className }: IconProps) {
   return (
     <svg {...svgProps(className)}>
@@ -60,10 +69,68 @@ export function ToteIcon({ className }: IconProps) {
   );
 }
 
+export function ArtIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M7 25.5 18.5 6.5l7 4.2L14 25.5H7Z" />
+      <path d="M16.2 10.2 21.8 13.6" />
+      <path d="M7 25.5h7" />
+    </svg>
+  );
+}
+
+export function DetailsIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M9 7.5h14v17H9z" />
+      <path d="M12.5 13h7M12.5 17h7M12.5 21h4.5" />
+      <path d="M12.5 9.5h4" />
+    </svg>
+  );
+}
+
+export function ScheduleIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M8 9.5h16v15H8z" />
+      <path d="M12 7.5v4M20 7.5v4M8 14.5h16" />
+      <path d="M13 19.5h2v2h-2zM17 19.5h2v2h-2z" />
+    </svg>
+  );
+}
+
+export function DepositIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M16 6.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Z" />
+      <path d="M13.5 12.2v7.6L20.2 16l-6.7-3.8Z" />
+    </svg>
+  );
+}
+
+export function DeliveryIcon({ className }: IconProps) {
+  return (
+    <svg {...svgProps(className)}>
+      <path d="M5.5 12.5h13v10h-13z" />
+      <path d="M18.5 15.5h5.5l2.5 4v3h-8v-7Z" />
+      <path d="M10 24.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM22 24.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+    </svg>
+  );
+}
+
 export const productIcons = {
   camisetas: ShirtIcon,
+  oversize: OversizeIcon,
   regatas: TankIcon,
   moletons: HoodieIcon,
   uniformes: UniformIcon,
   sacolas: ToteIcon,
+} as const;
+
+export const stepIcons = {
+  arte: ArtIcon,
+  detalhes: DetailsIcon,
+  prazo: ScheduleIcon,
+  entrada: DepositIcon,
+  entrega: DeliveryIcon,
 } as const;

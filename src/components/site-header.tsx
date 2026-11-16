@@ -6,10 +6,10 @@ import { WhatsAppLink } from "@/components/whatsapp-link";
 
 export function SiteHeader() {
   return (
-    <header id="topo" className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+    <header id="topo" className="sticky top-0 z-40 border-b border-brand/25 bg-white/95 backdrop-blur">
       <HeaderShadow />
-      <div className="brand-rule h-1 bg-brand" aria-hidden="true">
-        <div className="ml-auto h-full w-1/4 bg-accent" />
+      <div className="brand-rule h-1.5 bg-brand" aria-hidden="true">
+        <div className="ml-auto h-full w-2/5 bg-accent" />
       </div>
       <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center gap-3 px-5 sm:px-8">
         <a href="#inicio" className="mr-auto min-w-0 shrink">

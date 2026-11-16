@@ -32,7 +32,7 @@ export const business = {
   copyrightYear: 2026,
   title: "Camisetas Personalizadas na Chapada Diamantina | Sovi Malharia",
   description:
-    "Malharia e estamparia desde 2007 em Boninal (BA). Camisetas, regatas, moletons e uniformes personalizados com serigrafia e sublimação. Atendemos toda a Chapada Diamantina.",
+    "Malharia e estamparia desde 2007 em Boninal e Região. Camisetas, regatas, moletons e uniformes personalizados com serigrafia e sublimação. Entrega em toda a Chapada Diamantina.",
   /**
    * Domínio público com https, sem barra no final.
    * Defina NEXT_PUBLIC_SITE_URL quando o domínio existir.
@@ -47,7 +47,9 @@ export const business = {
   },
   instagram: "https://www.instagram.com/sovi_malharia/",
   instagramHandle: "@sovi_malharia",
-  maps: "https://maps.app.goo.gl/67g1zvdj9944JYUM9",
+  maps: "https://maps.app.goo.gl/KNcjPXD8ZAydsWAZ6",
+  mapsEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.8!2d-41.8288431!3d-12.7085135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x742670c3eb58619%3A0xd33108a0159f61d9!2sSovi%20Malharia!5e0!3m2!1spt-BR!2sbr!4v1731720000000!5m2!1spt-BR!2sbr",
   address: {
     street: "R. Aurélio José de Souza",
     city: "Boninal",
@@ -97,14 +99,6 @@ export const business = {
     { href: "#galeria", label: "Galeria" },
     { href: "#contato", label: "Contato" },
   ],
-  seals: ["Desde 2007", "Mínimo de 10 peças", "Entrega para toda a região"],
-  trust: [
-    "Desde 2007",
-    "Serigrafia e sublimação",
-    "Mínimo 10 peças",
-    "Prazo médio de 14 dias",
-    "Atendimento de segunda a sábado",
-  ],
   products: [
     {
       id: "camisetas",
@@ -112,6 +106,13 @@ export const business = {
       description:
         "Peças para eventos, equipes, escolas e empresas, com a arte em serigrafia ou sublimação total.",
       orderName: "camisetas personalizadas",
+    },
+    {
+      id: "oversize",
+      name: "Oversize",
+      description:
+        "Camisetas com caimento amplo, para quem prefere o modelo mais solto, com a mesma personalização em serigrafia ou sublimação total.",
+      orderName: "camisetas oversize personalizadas",
     },
     {
       id: "regatas",
@@ -147,19 +148,46 @@ export const business = {
       id: "serigrafia",
       name: "Serigrafia",
       text: "A tinta é aplicada por tela, cor a cor. A técnica é indicada para quantidades maiores e para artes com cores sólidas. Atende malhas como PV, poliéster e outras.",
+      image: {
+        src: "/images/servicos/serigrafia-processo.jpg",
+        alt: "Mão passando o rodo na tela de serigrafia sobre uma camiseta",
+        width: 1152,
+        height: 864,
+      },
     },
     {
       id: "sublimacao",
       name: "Sublimação total",
       text: "A estampa pode cobrir a peça inteira, com cores contínuas e sem limite prático de área. A sublimação total é feita em malha de poliéster e serve para artes com muitos detalhes.",
+      image: {
+        src: "/images/servicos/sublimacao-total-processo.jpg",
+        alt: "Camiseta sendo posicionada na prensa de sublimação total",
+        width: 1152,
+        height: 864,
+      },
     },
   ],
   steps: [
-    "Você envia sua arte ou pede ajuda para criar o design.",
-    "Confirmamos quantidade, tamanho e técnica.",
-    "Você paga 50% para iniciar a produção.",
-    "Produzimos em cerca de 14 dias.",
-    "Entregamos, e você paga os 50% restantes.",
+    {
+      id: "arte",
+      text: "Você envia sua arte ou nós elaboramos a arte do pedido.",
+    },
+    {
+      id: "detalhes",
+      text: "Confirmamos quantidade, tamanho e técnica.",
+    },
+    {
+      id: "prazo",
+      text: "Definimos o prazo de entrega, com produção em cerca de 14 dias.",
+    },
+    {
+      id: "entrada",
+      text: "Você paga 50% para iniciar a produção.",
+    },
+    {
+      id: "entrega",
+      text: "Entregamos, e você paga os 50% restantes.",
+    },
   ],
   audience: [
     {
@@ -177,10 +205,6 @@ export const business = {
     {
       title: "Grupos",
       text: "Identificação para equipes, viagens e ações coletivas.",
-    },
-    {
-      title: "Pousadas",
-      text: "Peças para a equipe e para o hóspede reconhecer a casa.",
     },
     {
       title: "Festas",
@@ -234,12 +258,12 @@ export const business = {
     {
       question: "Vocês fazem entrega para outras cidades da região?",
       answer:
-        "Sim. A entrega é feita para Boninal e para as outras cidades da Chapada Diamantina. No orçamento, confirmamos a entrega para a sua cidade.",
+        "Sim. Entregamos em Boninal e em toda a Chapada Diamantina. No orçamento, confirmamos a entrega para a sua cidade.",
     },
     {
       question: "Vocês trabalham com boné?",
       answer:
-        "Não. Trabalhamos com camisetas, regatas, moletons, uniformes e sacolas.",
+        "Não. Trabalhamos com camisetas, oversize, regatas, moletons, uniformes e sacolas.",
     },
     {
       question: "Qual a diferença entre serigrafia e sublimação?",
@@ -250,16 +274,51 @@ export const business = {
   /**
    * Fotos reais em /public/images/galeria.
    * Inclua um item só quando o arquivo existir.
-   *
-   * {
-   *   src: "/images/galeria/camisa-resenha.webp",
-   *   alt: "Camisa de time preta e amarela com o número 3, produzida em Boninal",
-   *   caption: "Camisa de time",
-   *   width: 1200,
-   *   height: 1500,
-   * }
    */
-  gallery: [] as GalleryItem[],
+  gallery: [
+    {
+      src: "/images/galeria/camisetas-9-ano.png",
+      alt: "Camisetas pretas de formatura do 9º ano com polvo roxo e nomes da turma",
+      caption: "Camisetas de formatura",
+      width: 915,
+      height: 915,
+    },
+    {
+      src: "/images/galeria/moletom-grupo-elite.png",
+      alt: "Moletom preto com estampa circular do Grupo Elite Boninalense",
+      caption: "Moletom personalizado",
+      width: 915,
+      height: 915,
+    },
+    {
+      src: "/images/galeria/camiseta-dragao.png",
+      alt: "Camiseta preta com dragão azul-esverdeado e o número 9 na frente e nas costas",
+      caption: "Camiseta com estampa",
+      width: 915,
+      height: 915,
+    },
+    {
+      src: "/images/galeria/camisetas-crisma-terco.png",
+      alt: "Camisetas branca e azul com estampas de Crisma e Terço dos Homens",
+      caption: "Camisetas religiosas",
+      width: 915,
+      height: 683,
+    },
+    {
+      src: "/images/galeria/camisetas-trilha-eucaristia.png",
+      alt: "Camiseta de trilha off-road e camiseta branca de Primeira Eucaristia",
+      caption: "Sublimação e serigrafia",
+      width: 915,
+      height: 915,
+    },
+    {
+      src: "/images/galeria/camisa-resenha.png",
+      alt: "Camisa de time preta e amarela com o número 3, produzida em Boninal",
+      caption: "Camisa de time",
+      width: 915,
+      height: 915,
+    },
+  ] as GalleryItem[],
 };
 
 export function publicSiteUrl(): string | undefined {

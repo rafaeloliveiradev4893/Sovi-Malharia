@@ -11,11 +11,11 @@ export function Products() {
       <Container className="py-16 sm:py-24">
         <SectionHeading
           eyebrow="Produtos"
-          title="Camisetas, regatas, moletons, uniformes e sacolas"
+          title="Camisetas, oversize, regatas, moletons, uniformes e sacolas"
         >
-          Camisetas personalizadas e outras peças em malha, produzidas em
-          Boninal para pedidos a partir de {business.price.minimumPieces}{" "}
-          unidades.
+          Camisetas personalizadas e outras peças em malha, com entrega em
+          Boninal e em toda a Chapada Diamantina, a partir de{" "}
+          {business.price.minimumPieces} unidades.
         </SectionHeading>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {business.products.map((product) => {
@@ -23,9 +23,13 @@ export function Products() {
             return (
               <li
                 key={product.id}
-                className="lift flex flex-col border border-line bg-white p-6"
+                className="lift flex flex-col border border-brand/20 bg-white p-6"
               >
-                <span className="text-brand">
+                <span className="flex h-1 w-10 overflow-hidden" aria-hidden="true">
+                  <span className="h-full w-2/3 bg-brand" />
+                  <span className="h-full w-1/3 bg-accent" />
+                </span>
+                <span className="mt-4 text-brand">
                   <Icon />
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-ink">

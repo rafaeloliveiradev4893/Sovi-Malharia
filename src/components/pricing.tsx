@@ -21,9 +21,9 @@ export function Pricing() {
           O valor fica entre {formatMoney(price.from)} e {formatMoney(price.to)}{" "}
           por peça e varia conforme a técnica, a quantidade e a personalização.
         </SectionHeading>
-        <div className="mt-10 border border-line bg-white">
-          <div className="h-1 bg-brand" aria-hidden="true">
-            <div className="ml-auto h-full w-16 bg-accent" />
+        <div className="mt-10 border border-brand/25 bg-white">
+          <div className="h-1.5 bg-brand" aria-hidden="true">
+            <div className="ml-auto h-full w-1/3 bg-accent" />
           </div>
           <div className="grid md:grid-cols-2">
             <div className="p-8 sm:p-10">
@@ -35,7 +35,7 @@ export function Pricing() {
               </p>
               <p className="mt-2 text-lg text-ink-soft">por peça</p>
             </div>
-            <ul className="space-y-4 border-t border-line p-8 sm:p-10 md:border-l md:border-t-0">
+            <ul className="space-y-4 border-t border-brand/20 p-8 sm:p-10 md:border-l md:border-t-0">
               {conditions.map((item) => (
                 <li key={item} className="flex gap-3 text-base leading-relaxed text-ink">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent" aria-hidden="true" />

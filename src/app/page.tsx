@@ -10,7 +10,6 @@ import { Products } from "@/components/products";
 import { Reveal } from "@/components/reveal";
 import { ServiceArea } from "@/components/service-area";
 import { Techniques } from "@/components/techniques";
-import { TrustBar } from "@/components/trust-bar";
 import { faqJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
     <>
       <JsonLd data={faqJsonLd()} />
       <Hero />
-      <TrustBar />
       <Reveal>
         <Products />
       </Reveal>

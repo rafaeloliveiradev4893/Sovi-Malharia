@@ -14,6 +14,13 @@ export function SectionHeading({
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
         {eyebrow}
       </p>
+      <span
+        className="mt-3 flex h-1 w-14 overflow-hidden"
+        aria-hidden="true"
+      >
+        <span className="h-full w-2/3 bg-brand" />
+        <span className="h-full w-1/3 bg-accent" />
+      </span>
       <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
         {title}
       </h2>

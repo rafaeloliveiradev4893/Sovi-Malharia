@@ -6,7 +6,13 @@ export function FinalCta() {
   return (
     <section id="contato" className="bg-paper">
       <Container className="py-16 sm:py-24">
-        <div className="border border-line bg-white px-6 py-12 text-center sm:px-12">
+        <div className="border border-brand/25 bg-white px-6 py-12 text-center sm:px-12">
+          <div className="mx-auto mb-4 h-1.5 w-20 overflow-hidden" aria-hidden="true">
+            <div className="flex h-full w-full">
+              <span className="h-full w-2/3 bg-brand" />
+              <span className="h-full w-1/3 bg-accent" />
+            </div>
+          </div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
             {business.name}
           </p>

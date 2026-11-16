@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const socialImageSize = { width: 1200, height: 630 };
 export const socialImageAlt =
-  "Sovi Malharia — camisetas personalizadas na Chapada Diamantina, em Boninal (BA)";
+  "Sovi Malharia — camisetas personalizadas em Boninal e Região, Chapada Diamantina";
 export const socialImageContentType = "image/png";
 
 export function renderSocialCard() {
@@ -59,7 +59,7 @@ export function renderSocialCard() {
           Camisetas personalizadas na Chapada Diamantina
         </div>
         <div style={{ marginTop: 24, fontSize: 28, color: "#3e3a36" }}>
-          Boninal (BA). Desde 2007. Serigrafia e sublimação.
+          Boninal e Região · Desde 2007 · Serigrafia e sublimação
         </div>
         <div style={{ marginTop: "auto", display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 28, fontWeight: 700, color: "#1f4460" }}>

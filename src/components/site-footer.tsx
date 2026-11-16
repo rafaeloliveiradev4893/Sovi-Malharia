@@ -4,7 +4,7 @@ import { whatsappHref } from "@/lib/whatsapp";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-white">
+    <footer className="border-t border-brand/25 bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-[1.2fr_1fr_0.8fr]">
         <div>
           <Logo className="h-9 w-auto" />
@@ -51,7 +51,7 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="border-t border-line">
+      <div className="border-t border-brand/20">
         <p className="mx-auto w-full max-w-6xl px-5 py-4 text-sm text-muted sm:px-8">
           © {business.copyrightYear} {business.name}. Boninal, BA.
         </p>

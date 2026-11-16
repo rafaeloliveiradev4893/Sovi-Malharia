@@ -15,7 +15,7 @@ export function Gallery() {
           title="Trabalhos de estamparia entregues"
         >
           Peças produzidas na malharia, com serigrafia e sublimação, para
-          clientes de Boninal e da Chapada Diamantina.
+          clientes de toda a Chapada Diamantina.
         </SectionHeading>
         {photos.length > 0 ? (
           <GalleryGrid items={photos} />

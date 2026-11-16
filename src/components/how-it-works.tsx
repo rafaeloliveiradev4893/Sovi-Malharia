@@ -1,5 +1,6 @@
 import { business } from "@/config/business";
 import { Container } from "@/components/container";
+import { stepIcons } from "@/components/icons";
 import { SectionHeading } from "@/components/section-heading";
 
 export function HowItWorks() {
@@ -13,14 +14,28 @@ export function HowItWorks() {
           Do primeiro contato à entrega, o caminho tem cinco passos.
         </SectionHeading>
         <ol className="mt-10 grid gap-4 md:grid-cols-5">
-          {business.steps.map((step, index) => (
-            <li key={step} className="lift border border-line bg-white p-5">
-              <span className="text-sm font-semibold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-3 text-base leading-relaxed text-ink">{step}</p>
-            </li>
-          ))}
+          {business.steps.map((step, index) => {
+            const Icon = stepIcons[step.id as keyof typeof stepIcons];
+
+            return (
+              <li
+                key={step.id}
+                className="lift flex flex-col items-center border border-brand/20 bg-white p-5 text-center"
+              >
+                <span
+                  className={`flex h-12 w-12 items-center justify-center ${index % 2 === 0 ? "text-brand" : "text-accent"}`}
+                >
+                  <Icon className="h-9 w-9" />
+                </span>
+                <span
+                  className={`mt-3 text-sm font-semibold ${index % 2 === 0 ? "text-brand" : "text-accent"}`}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-3 text-base leading-relaxed text-ink">{step.text}</p>
+              </li>
+            );
+          })}
         </ol>
       </Container>
     </section>
