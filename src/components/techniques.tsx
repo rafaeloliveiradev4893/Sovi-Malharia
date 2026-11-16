@@ -26,7 +26,9 @@ export function Techniques() {
                 width={technique.image.width}
                 height={technique.image.height}
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="aspect-[4/3] w-full object-cover"
+                loading="lazy"
+                fetchPriority="low"
+                className="aspect-[4/3] w-full bg-brand-soft object-cover"
               />
               <div className="p-6 sm:p-8">
                 <h3 className="text-2xl font-semibold text-ink">

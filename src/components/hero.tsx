@@ -32,7 +32,8 @@ export function Hero() {
           </div>
         </div>
         <Logo
-          priority
+          loading="eager"
+          fetchPriority="high"
           className="hero-panel order-1 h-36 w-auto max-w-[min(100%,20rem)] object-contain sm:h-48 lg:order-2 lg:h-80 lg:max-w-none lg:justify-self-end"
         />
       </Container>

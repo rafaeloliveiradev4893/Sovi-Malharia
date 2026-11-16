@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { GalleryItem } from "@/config/business";
 
 const PREVIEW_MOBILE = 4;
@@ -11,6 +11,7 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [active, setActive] = useState(0);
   const [expanded, setExpanded] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const photo = items[active];
   const hasMoreMobile = items.length > PREVIEW_MOBILE;
   const hasMoreDesktop = items.length > PREVIEW_DESKTOP;
@@ -20,7 +21,7 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
 
   function open(index: number) {
     setActive(index);
-    dialogRef.current?.showModal();
+    setDialogOpen(true);
   }
 
   function close() {
@@ -30,6 +31,12 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
   function step(direction: number) {
     setActive((current) => (current + direction + items.length) % items.length);
   }
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog || !dialogOpen || dialog.open) return;
+    dialog.showModal();
+  }, [dialogOpen]);
 
   if (!photo) return null;
 
@@ -56,7 +63,9 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
                   width={item.width}
                   height={item.height}
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="aspect-[4/5] w-full object-cover"
+                  loading="lazy"
+                  fetchPriority="low"
+                  className="aspect-[4/5] w-full bg-brand-soft object-cover"
                 />
                 {item.caption ? (
                   <span className="block px-4 py-3 text-sm font-medium text-ink">
@@ -86,6 +95,7 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
         ref={dialogRef}
         className="gallery-dialog"
         aria-label={photo.caption || photo.alt}
+        onClose={() => setDialogOpen(false)}
         onClick={(event) => {
           if (event.target === event.currentTarget) close();
         }}
@@ -94,30 +104,36 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
           if (event.key === "ArrowLeft") step(-1);
         }}
       >
-        <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
-          <p className="text-sm font-semibold text-ink">
-            {photo.caption || "Trabalho entregue"}
-          </p>
-          <button type="button" className="text-sm font-semibold text-brand" onClick={close}>
-            Fechar
-          </button>
-        </div>
-        <Image
-          src={photo.src}
-          alt={photo.alt}
-          width={photo.width}
-          height={photo.height}
-          className="max-h-[70vh] w-full object-contain"
-        />
-        {items.length > 1 ? (
-          <div className="flex justify-between gap-3 border-t border-line px-4 py-3">
-            <button type="button" className="text-sm font-semibold text-brand" onClick={() => step(-1)}>
-              Anterior
-            </button>
-            <button type="button" className="text-sm font-semibold text-brand" onClick={() => step(1)}>
-              Próxima
-            </button>
-          </div>
+        {dialogOpen ? (
+          <>
+            <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
+              <p className="text-sm font-semibold text-ink">
+                {photo.caption || "Trabalho entregue"}
+              </p>
+              <button type="button" className="text-sm font-semibold text-brand" onClick={close}>
+                Fechar
+              </button>
+            </div>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              sizes="(min-width: 960px) 960px, calc(100vw - 2rem)"
+              loading="eager"
+              className="max-h-[70vh] w-full bg-white object-contain"
+            />
+            {items.length > 1 ? (
+              <div className="flex justify-between gap-3 border-t border-line px-4 py-3">
+                <button type="button" className="text-sm font-semibold text-brand" onClick={() => step(-1)}>
+                  Anterior
+                </button>
+                <button type="button" className="text-sm font-semibold text-brand" onClick={() => step(1)}>
+                  Próxima
+                </button>
+              </div>
+            ) : null}
+          </>
         ) : null}
       </dialog>
     </>

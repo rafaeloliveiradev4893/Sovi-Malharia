@@ -3,10 +3,12 @@ import { business } from "@/config/business";
 
 export function Logo({
   className = "h-9 w-auto",
-  priority = false,
+  loading = "lazy",
+  fetchPriority,
 }: {
   className?: string;
-  priority?: boolean;
+  loading?: "lazy" | "eager";
+  fetchPriority?: "high" | "low" | "auto";
 }) {
   return (
     <Image
@@ -14,7 +16,8 @@ export function Logo({
       alt={business.logo.alt}
       width={business.logo.width}
       height={business.logo.height}
-      priority={priority}
+      loading={loading}
+      fetchPriority={fetchPriority}
       className={className}
     />
   );

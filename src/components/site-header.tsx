@@ -13,7 +13,7 @@ export function SiteHeader() {
       </div>
       <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center gap-3 px-5 sm:px-8">
         <a href="#inicio" className="mr-auto min-w-0 shrink">
-          <Logo priority className="h-8 w-auto max-w-[42vw] sm:h-9 sm:max-w-none" />
+          <Logo loading="eager" className="h-8 w-auto max-w-[42vw] sm:h-9 sm:max-w-none" />
         </a>
         <nav aria-label="Seções" className="hidden items-center gap-6 md:flex">
           {business.nav.map((link) => (

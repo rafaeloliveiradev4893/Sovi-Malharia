@@ -22,7 +22,7 @@ export function ServiceArea() {
             <iframe
               title="Localização da Sovi Malharia no Google Maps"
               src={business.mapsEmbed}
-              className="aspect-[4/3] w-full border-0 lg:aspect-auto lg:min-h-[320px] lg:h-full"
+              className="aspect-[4/3] w-full border-0 lg:aspect-auto lg:h-full lg:min-h-[320px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
