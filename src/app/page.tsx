@@ -1,4 +1,5 @@
 import { Audience } from "@/components/audience";
+import { Fabrics } from "@/components/fabrics";
 import { Faq } from "@/components/faq";
 import { FinalCta } from "@/components/final-cta";
 import { Gallery } from "@/components/gallery";
@@ -19,6 +20,9 @@ export default function Home() {
       <Hero />
       <Reveal>
         <Products />
+      </Reveal>
+      <Reveal>
+        <Fabrics />
       </Reveal>
       <Reveal>
         <Techniques />

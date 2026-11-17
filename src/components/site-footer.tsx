@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-brand/25 bg-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-[1.2fr_1fr_0.8fr]">
         <div>
-          <Logo className="h-9 w-auto" />
+          <Logo className="h-12 w-auto" />
           <p className="mt-4 text-base font-semibold text-ink">{business.name}</p>
           <p className="mt-1 text-sm text-muted">
             {business.address.city} ({business.address.region})

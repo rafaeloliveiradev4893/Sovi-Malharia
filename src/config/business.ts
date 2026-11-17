@@ -88,16 +88,16 @@ export const business = {
     "Dinheiro",
   ],
   logo: {
-    src: "/images/logo/logo.svg",
+    src: "/images/logo/logo.png",
     alt: "Logotipo da Sovi Malharia",
-    width: 440,
-    height: 96,
+    width: 800,
+    height: 414,
   },
   nav: [
-    { href: "#produtos", label: "Produtos" },
-    { href: "#como-funciona", label: "Como funciona" },
-    { href: "#galeria", label: "Galeria" },
-    { href: "#contato", label: "Contato" },
+    { href: "/#produtos", label: "Produtos" },
+    { href: "/#malhas", label: "Malhas" },
+    { href: "/#galeria", label: "Galeria" },
+    { href: "/#contato", label: "Contato" },
   ],
   products: [
     {

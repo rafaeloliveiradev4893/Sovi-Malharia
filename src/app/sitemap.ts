@@ -8,9 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url,
-      lastModified: "2026-11-15",
+      lastModified: "2026-11-16",
       changeFrequency: "monthly",
       priority: 1,
+    },
+    {
+      url: `${url}/malhas`,
+      lastModified: "2026-11-16",
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }
