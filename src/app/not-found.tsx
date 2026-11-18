@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <Container className="py-20 sm:py-28">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">
         Página não encontrada
       </p>
-      <h1 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-ink">
+      <h1 className="mt-3 max-w-xl text-4xl font-extrabold tracking-tight text-ink">
         Este endereço não faz parte do site.
       </h1>
       <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">

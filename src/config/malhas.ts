@@ -112,9 +112,9 @@ const hex = {
   chumbo: "#4A4A4E",
   grafite: "#5A5A5C",
   preto: "#161616",
-  mesclaCl: "#C8C8C8",
-  mesclaM: "#9C9C9C",
-  mesclaEsc: "#5C5C5C",
+  mesclaCl: "#C9C9C9",
+  mesclaM: "#8A8A8A",
+  mesclaEsc: "#2E2E2E",
   camoGreen: "#4A5A32",
 } as const;
 

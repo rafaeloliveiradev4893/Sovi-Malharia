@@ -13,7 +13,7 @@ export function Faq() {
         <div className="mt-8 max-w-3xl border-t border-brand/20">
           {business.faq.map((item) => (
             <details key={item.question} className="group border-b border-brand/15">
-              <summary className="flex cursor-pointer items-center justify-between gap-4 py-4 text-base font-semibold text-ink">
+              <summary className="flex cursor-pointer items-center justify-between gap-4 py-4 text-base font-bold tracking-tight text-ink">
                 {item.question}
                 <span className="faq-mark text-xl leading-none text-accent" aria-hidden="true">
                   +

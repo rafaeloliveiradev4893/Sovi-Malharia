@@ -13,10 +13,10 @@ export function FinalCta() {
               <span className="h-full w-1/3 bg-accent" />
             </div>
           </div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
             {business.name}
           </p>
-          <h2 className="mx-auto mt-3 max-w-xl text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+          <h2 className="mx-auto mt-3 max-w-xl text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
             Pronto para fazer o seu pedido?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">

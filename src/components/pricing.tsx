@@ -27,10 +27,10 @@ export function Pricing() {
           </div>
           <div className="grid md:grid-cols-2">
             <div className="p-8 sm:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand">
                 A partir de
               </p>
-              <p className="mt-3 text-5xl font-semibold tracking-tight text-ink">
+              <p className="mt-3 text-5xl font-extrabold tracking-tight text-ink sm:text-6xl">
                 {formatMoney(price.from)}
               </p>
               <p className="mt-2 text-lg text-ink-soft">por peça</p>

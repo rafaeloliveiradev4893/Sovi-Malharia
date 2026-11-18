@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { Suspense } from "react";
 import { headers } from "next/headers";
 import { connection } from "next/server";
@@ -11,10 +11,11 @@ import { business, publicSiteUrl } from "@/config/business";
 import { localBusinessJsonLd } from "@/lib/json-ld";
 import "./globals.css";
 
-const sans = Source_Sans_3({
-  subsets: ["latin"],
+const sans = Roboto({
+  subsets: ["latin", "latin-ext"],
   display: "swap",
-  variable: "--font-source-sans",
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-roboto",
 });
 
 function requestOrigin(headerList: Headers): URL | undefined {
@@ -87,7 +88,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${sans.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col pb-28 md:pb-0">
+      <body className="flex min-h-full flex-col pb-28 font-sans md:pb-0">
         <script
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js')",

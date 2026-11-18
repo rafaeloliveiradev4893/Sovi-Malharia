@@ -31,7 +31,7 @@ export function Techniques() {
                 className="aspect-[4/3] w-full bg-brand-soft object-cover"
               />
               <div className="p-6 sm:p-8">
-                <h3 className="text-2xl font-semibold text-ink">
+                <h3 className="text-2xl font-bold tracking-tight text-ink">
                   {technique.name}
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-ink-soft">

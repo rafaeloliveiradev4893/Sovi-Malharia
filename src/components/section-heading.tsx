@@ -11,7 +11,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="max-w-2xl">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">
         {eyebrow}
       </p>
       <span
@@ -21,7 +21,7 @@ export function SectionHeading({
         <span className="h-full w-2/3 bg-brand" />
         <span className="h-full w-1/3 bg-accent" />
       </span>
-      <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+      <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
         {title}
       </h2>
       {children ? (

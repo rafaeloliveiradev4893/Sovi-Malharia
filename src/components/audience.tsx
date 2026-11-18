@@ -22,7 +22,7 @@ export function Audience() {
                 <span className="h-full w-2/3 bg-brand" />
                 <span className="h-full w-1/3 bg-accent" />
               </span>
-              <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
+              <h3 className="text-lg font-bold tracking-tight text-ink">{item.title}</h3>
               <p className="mt-2 text-base leading-relaxed text-ink-soft">
                 {item.text}
               </p>

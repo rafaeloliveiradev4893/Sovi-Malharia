@@ -28,7 +28,7 @@ export function HowItWorks() {
                   <Icon className="h-9 w-9" />
                 </span>
                 <span
-                  className={`mt-3 text-sm font-semibold ${index % 2 === 0 ? "text-brand" : "text-accent"}`}
+                  className={`mt-3 text-sm font-extrabold tracking-tight ${index % 2 === 0 ? "text-brand" : "text-accent"}`}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>

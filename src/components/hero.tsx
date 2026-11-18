@@ -8,10 +8,10 @@ export function Hero() {
     <section id="inicio" className="bg-white">
       <Container className="grid items-center justify-items-center gap-10 py-12 sm:gap-12 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:justify-items-stretch lg:py-20">
         <div className="order-2 w-full max-w-xl text-center lg:order-1 lg:max-w-none lg:justify-self-start lg:text-left">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">
             Malharia e estamparia em Boninal e Região
           </p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-tight text-ink sm:text-6xl">
             Camisetas personalizadas na Chapada Diamantina
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">

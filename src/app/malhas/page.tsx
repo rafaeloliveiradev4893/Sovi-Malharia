@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 export default function MalhasPage() {
   return (
     <Container className="py-12 sm:py-20">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">
         Catálogo
       </p>
-      <h1 className="mt-3 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+      <h1 className="mt-3 max-w-3xl text-balance text-4xl font-extrabold tracking-tight text-ink sm:text-6xl">
         Malhas e cores disponíveis
       </h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
@@ -59,7 +59,7 @@ export default function MalhasPage() {
       <div className="mt-12 space-y-16">
         {fabricCategories.map((category) => (
           <section key={category.id} id={category.id}>
-            <h2 className="text-2xl font-semibold tracking-tight text-ink">
+            <h2 className="text-2xl font-extrabold tracking-tight text-ink">
               {category.name}
             </h2>
             <p className="mt-1 text-sm text-muted">

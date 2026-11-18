@@ -32,7 +32,7 @@ export function Products() {
                 <span className="mt-4 text-brand">
                   <Icon />
                 </span>
-                <h3 className="mt-4 text-xl font-semibold text-ink">
+                <h3 className="mt-4 text-xl font-bold tracking-tight text-ink">
                   {product.name}
                 </h3>
                 <p className="mt-2 flex-1 text-base leading-relaxed text-ink-soft">
