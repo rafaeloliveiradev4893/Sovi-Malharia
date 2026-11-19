@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { business } from "@/config/business";
 
 export const socialImageSize = { width: 1200, height: 630 };
 export const socialImageAlt =
@@ -59,7 +60,7 @@ export function renderSocialCard() {
           Camisetas personalizadas na Chapada Diamantina
         </div>
         <div style={{ marginTop: 24, fontSize: 28, color: "#3e3a36" }}>
-          Boninal e Região · Desde 2007 · Serigrafia e sublimação
+          Boninal e Região · Desde {business.foundingYear} · Serigrafia e sublimação
         </div>
         <div style={{ marginTop: "auto", display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 28, fontWeight: 700, color: "#1f4460" }}>

@@ -28,11 +28,11 @@ const phone = {
 
 export const business = {
   name: "Sovi Malharia",
-  foundingYear: 2007,
+  foundingYear: 2010,
   copyrightYear: 2026,
   title: "Camisetas Personalizadas na Chapada Diamantina | Sovi Malharia",
   description:
-    "Malharia e estamparia desde 2007 em Boninal e Região. Camisetas, regatas, moletons e uniformes personalizados com serigrafia e sublimação. Entrega em toda a Chapada Diamantina.",
+    "Malharia e estamparia desde 2010 em Boninal e Região. Camisetas, regatas, moletons e uniformes personalizados com serigrafia e sublimação. Entrega em toda a Chapada Diamantina.",
   /**
    * Domínio público com https, sem barra no final.
    * Defina NEXT_PUBLIC_SITE_URL quando o domínio existir.
